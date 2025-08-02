@@ -16,8 +16,15 @@ precoPorHora = Convert.ToDecimal(Console.ReadLine());
 // Instancia a classe Estacionamento, já com os valores obtidos anteriormente
 Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
 
+// Adiciona 3 veículos diretamente à lista de veículos
+es.AdicionarVeiculo("ABC-1234");
+es.AdicionarVeiculo("DEF-5678");
+es.AdicionarVeiculo("GHI-9012");
+es.AdicionarVeiculo("EMW-9012");
+
 string opcao = string.Empty;
 bool exibirMenu = true;
+
 
 // Realiza o loop do menu
 while (exibirMenu)
@@ -32,7 +39,7 @@ while (exibirMenu)
     switch (Console.ReadLine())
     {
         case "1":
-            es.AdicionarVeiculo();
+            es.AdicionarVeiculo(null);
             break;
 
         case "2":
